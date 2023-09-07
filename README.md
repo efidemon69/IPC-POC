@@ -24,6 +24,10 @@ Intercoms Hook is a C++ project that demonstrates inter-process communication (I
 - The server console will display received messages along with timestamps and the time taken for each request.
 - The DLL will allocate a console in the target process and prompt the user for input to send messages to the server.
 
+# Dependencies
+- winsock2.h
+- ws2_32.lib **(Make sure to include it or project wont build)**
+
 # Contributing
 Feel free to edit the code and ask for pull requests.
 
