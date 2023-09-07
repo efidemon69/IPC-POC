@@ -26,3 +26,6 @@ Intercoms Hook is a C++ project that demonstrates inter-process communication (I
 
 # Contributing
 Feel free to edit the code and ask for pull requests.
+
+# Credits
+[WinSocket documentation](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
