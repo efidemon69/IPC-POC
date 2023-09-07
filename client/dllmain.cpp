@@ -11,6 +11,9 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReser
 
    if(ul_reason_for_call == DLL_PROCESS_ATTACH)
    {
+        HMODULE module = GetModuleHandle(NULL);
+        uintptr_t imagebase = reinterpret_cast<uintptr_t>(module);
+       
         // winsock init
         WSADATA w_data;
         if ( WSAStartup( MAKEWORD( 2, 2 ), &w_data ) != 0 )
@@ -38,9 +41,13 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReser
             WSACleanup( );
         }
 
+        std::string message = "Imagebase: " + std::to_string(imagebase);
+        send(clientSocket, message.c_str(), message.size(), 0);
+
+        /*
         // an advanced message system will be pushed later
         const char* message = "hello world from dll.";
-        send( clientSocket, message, strlen( message ), 0 );
+        send( clientSocket, message, strlen( message ), 0 );*/
 
         closesocket( clientSocket );
         WSACleanup( );
