@@ -17,7 +17,7 @@ Intercoms Hook is a C++ project that demonstrates inter-process communication (I
 - Allocate a console to post custom requests. **(SOON)**
 - Prompts the user for input to send messages to the server. **(SOON)**
 - Communicates with the server using sockets and sends messages.
-- 
+
 # Usage
 - Build the server and DLL projects separately.
 - Inject the DLL into any process (feel free to use any injector)
