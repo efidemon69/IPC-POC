@@ -1,5 +1,5 @@
 # Intercoms Hook
-Intercoms Hook is a C++ project that demonstrates inter-process communication (IPC) between a console application and a DLL, this project consists of two main components:
+Intercoms-H is a C++ project that demonstrates inter-process communication (IPC) between a console application and a DLL
 
 **The server:** The server is a simple console application that provides an interface which listen for DLL requests and displays them once its sent.
 
